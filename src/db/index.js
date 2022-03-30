@@ -4,6 +4,7 @@ const client = new pg.Client({
   connectionString: process.env.DATABASE_URL || "",
   ssl: process.env.DATABASE_URL ? { rejectUnauthorized: false } : false
 });
+console.log(process.env.DATABASE_URL, "DB URL")
 
 client
   .connect()
